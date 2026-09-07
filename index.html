@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlashLearn - Flashcard Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">FL</div>
+      <div>
+        <h1>FlashLearn</h1>
+        <p>Learn. Practice. Remember.</p>
+      </div>
+    </div>
+    <button id="addBtn" class="primary">+ Add New Flashcard</button>
+  </header>
+
+  <main class="container">
+    <div class="progress-row">
+      <div><strong id="counter">1 / 8</strong><span>Card</span></div>
+      <div class="progress"><span id="progressBar"></span></div>
+    </div>
+
+    <section class="card" id="flashcard">
+      <span class="label">QUESTION</span>
+      <h2 id="question">Loading...</h2>
+      <div id="answerBox" class="answer hidden">
+        <span class="label">ANSWER</span>
+        <p id="answer"></p>
+      </div>
+    </section>
+
+    <div class="controls two">
+      <button id="prevBtn">‹ Previous</button>
+      <button id="showBtn" class="primary">Show Answer</button>
+    </div>
+    <button id="nextBtn" class="wide">Next ›</button>
+
+    <div class="controls two small">
+      <button id="editBtn">Edit</button>
+      <button id="deleteBtn" class="danger">Delete</button>
+    </div>
+    <button id="resetBtn" class="wide secondary">Reset to defaults</button>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button id="closeModal" class="close">×</button>
+      <h2 id="modalTitle">Add New Flashcard</h2>
+      <label>Question</label>
+      <textarea id="qInput" placeholder="Enter question"></textarea>
+      <label>Answer</label>
+      <textarea id="aInput" placeholder="Enter answer"></textarea>
+      <button id="saveBtn" class="primary wide">Save Flashcard</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
